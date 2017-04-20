@@ -24,6 +24,7 @@ export default {
   box-shadow: 0 0 1px rgba(0,0,0,0.25);
   padding: 10px 0;
   background-color: #fff;
+  z-index: 100;
 }
 .title {
   color: #42b983;

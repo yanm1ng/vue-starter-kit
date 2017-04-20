@@ -1,3 +1,4 @@
 {
-  "/project/comments.action": "/project_comments"
+  "/project/comments.action": "/project_comments",
+  "/comment/add.action": "/push_comment"
 }

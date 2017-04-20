@@ -9,6 +9,10 @@ module.exports = () => {
           "date": "@datetime"
         }],
         "next": "@increment"
+      }),
+      push_comment: Mock.mock({
+        "error": 0,
+        "message": "成功"
       })
     }
     return db;

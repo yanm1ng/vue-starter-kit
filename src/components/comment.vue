@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <ol v-if="list.length > 0">
       <li v-for="(item, index) in list" :key="index">
         <div class="info">
@@ -26,10 +26,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  margin-top: 100px;
-  padding: 0 65px;
-}
 .nocomments {
   text-align: center;
 }
