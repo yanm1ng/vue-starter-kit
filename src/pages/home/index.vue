@@ -2,8 +2,11 @@
   <div>
     <v-header title="Your First Vue.js App"></v-header>
     <div class="container">
-      <input v-model="comment" placeholder="post your comment"/>
-      <button @click="addComment">post</button>
+      <div class="form">
+        <input v-model="comment" placeholder="post your comment" @keyup.enter="addComment" />
+        <button @click="addComment">submit</button>
+        <span class="tip">Tips：you can press enter to submit!</span>
+      </div>
       <v-comment :list="list"></v-comment>
     </div>
   </div>
@@ -30,7 +33,7 @@ export default {
         }).then((res) => {
           if (res.data.error === 0) {
             this.list.unshift({
-              author: 'Rookie',
+              author: 'Visitor Rookie',
               comment,
               date: timeFormat('yyyy-MM-dd hh:mm:ss')
             })
@@ -53,5 +56,13 @@ export default {
 .container {
   margin-top: 100px;
   padding: 0 65px;
+}
+.form {
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #dddddd;
+}
+.tip {
+  color: #42b983;
+  font-size: 13px;
 }
 </style>
