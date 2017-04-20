@@ -1,21 +1,25 @@
-# vue-project
+# vue-mock
 
-> A Vue.js project
+> A Vue.js project with mock server
 
 ## Build Setup
 
 ``` bash
+# install json-server
+npm install json-server -g
+
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload and mock
+npm run start
+
+# serve with hot reload at localhost:8181
 npm run dev
+
+# run mock server at localhost:3000
+npm run mock
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
