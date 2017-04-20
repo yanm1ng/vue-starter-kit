@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-header title="Your First Vue.js App"></v-header>
-    <v-comment v-if="list.length > 0" :list="list"></v-comment>
+    <v-comment :list="list"></v-comment>
   </div>
 </template>
 

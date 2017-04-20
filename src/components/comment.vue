@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <ol>
-      <li v-for="item in list">
+    <ol v-if="list.length > 0">
+      <li v-for="(item, index) in list" :key="index">
         <div class="info">
           <span class="author">{{ item.author }}</span>
           <span class="time">{{ item.date }}</span>
@@ -9,6 +9,7 @@
         <div class="content">{{ item.comment }}</div>
       </li>
     </ol>
+    <p class="nocomments" v-else>暂无评论</p>
   </div>
 </template>
 
@@ -28,6 +29,9 @@ export default {
 .container {
   margin-top: 100px;
   padding: 0 65px;
+}
+.nocomments {
+  text-align: center;
 }
 ol {
   padding: 0;
