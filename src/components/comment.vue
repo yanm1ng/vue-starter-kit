@@ -6,7 +6,7 @@
           <span class="author">{{ item.author }}</span>
           <span class="time">{{ item.date }}</span>
         </div>
-        <div class="content">{{ item.comment }}</div>
+        <div class="content">{{ item.comment | wordSlice }}</div>
       </li>
     </ol>
     <p class="nocomments" v-else>暂无评论</p>

@@ -15,7 +15,7 @@
 <script>
 
 import axios from 'axios'
-import { timeFormat } from '../../utils'
+import { timeFormat } from '@/utils'
 
 export default {
   data() {
