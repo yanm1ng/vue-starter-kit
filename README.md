@@ -2,7 +2,37 @@
 
 > A Vue.js project with mock server
 
-## Build Setup
+## features
+
+we use mock.js to build your mock data ( as local database :) ), for example:
+
+```javascript
+var Mock = require('mockjs');
+
+module.exports = () => {
+    var db = {
+      project_comments: Mock.mock({
+        "comments|5": [{
+          "author": "@name",
+          "comment": "@cparagraph",
+          "date": "@datetime"
+        }],
+        "next": "@increment"
+      }),
+      push_comment: Mock.mock({
+        "error": 0,
+        "message": "成功"
+      })
+    }
+    return db;
+}
+```
+
+## json-server
+
+we use json-server to get a full fake REST API
+
+## build setup
 
 ``` bash
 # install json-server
@@ -23,3 +53,6 @@ npm run mock
 # build for production with minification
 npm run build
 ```
+## TODO
+
+- [ ] refresh the mock server after modifying mock/db.js
