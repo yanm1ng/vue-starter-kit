@@ -1,6 +1,7 @@
 import Vue from 'vue'
-import App from './App'
+import App from './app'
 import router from './router'
+import store from './store'
 import components from './components/' // 加载公共组件
 import * as filters from './filters/'
 
@@ -16,6 +17,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
