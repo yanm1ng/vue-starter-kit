@@ -3,8 +3,8 @@
     <v-header title="Your First Vue.js App"></v-header>
     <div class="container">
       <div class="form">
-        <input class="comment-input" v-model="comment" placeholder="post your comment" @keyup.enter="addComment" />
-        <a @click="addComment(comment)" class="submit">submit</a>
+        <input class="comment-input" :value="comment" @input="updateComment" placeholder="post your comment" @keyup.enter="addComment" />
+        <a @click="addComment" class="submit">submit</a>
         <span class="tip">Tips：you can press enter to submit!</span>
       </div>
       <v-comment :list="list"></v-comment>
@@ -15,23 +15,22 @@
 <script>
 
 import axios from 'axios'
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapState, mapMutations } from 'vuex'
 import * as types from '@/store/mutation-types'
 
 export default {
-  data() {
-    return {
-      comment: ''
-    }
-  },
   computed: mapState({
-    list: state => state.list,
+    list: state => state.home.list,
+    comment: state => state.home.comment
   }),
   methods: {
     ...mapActions([
       types.getComments,
       types.addComment
-    ])
+    ]),
+    updateComment (e) {
+      this.$store.commit(types.updateComment, e.target.value)
+    }
   },
   created: function () {
     this.getComments()

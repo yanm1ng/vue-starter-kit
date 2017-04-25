@@ -10,7 +10,8 @@ export default {
         commit(types.getComments, comments)
       })
   },
-  addComment({ commit, state }, comment) {
+  addComment({ commit, state }) {
+    const comment = state.home.comment.trim();
     if (comment.length > 0) {
       axios.post('api/comment/add.action', {
         comment
