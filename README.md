@@ -55,4 +55,5 @@ npm run build
 ```
 ## TODO
 
+- [x] add vuex to manage app state
 - [ ] refresh the mock server after modifying mock/db.js
