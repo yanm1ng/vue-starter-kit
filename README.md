@@ -1,6 +1,6 @@
-# vue-mock
+# vue-starter-kit
 
-> A Vue.js project with mock server
+> A Vue.js project with mock-server and unit-test
 
 ## features
 
