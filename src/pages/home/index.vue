@@ -8,6 +8,9 @@
         <span class="tip">Tips：you can press enter to submit!</span>
       </div>
       <v-comment :list="list"></v-comment>
+      <div v-if="list.length >= 5" class="footer">
+        <a class="loadmore" @click="getComments(page)">{{ page == -1 ? '已经到底啦' : '加载更多' }}</a>
+      </div>
     </div>
   </div>
 </template>
@@ -20,7 +23,8 @@ import * as types from '@/store/mutation-types'
 export default {
   computed: mapState({
     list: state => state.home.list,
-    comment: state => state.home.comment
+    comment: state => state.home.comment,
+    page: state => state.home.page
   }),
   methods: {
     ...mapActions([
@@ -32,7 +36,7 @@ export default {
     }
   },
   created: function () {
-    this.getComments()
+    this.getComments(this.page)
   }
 }
 </script>
@@ -81,5 +85,20 @@ export default {
   padding-left: 10px;
   color: #42b983;
   font-size: 13px;
+}
+.footer {
+  text-align: center;
+}
+.loadmore {
+  padding: 3px 40px;
+  border-radius: 15px;
+  display: inline-block;
+  color: #4fc08d;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  border: 1px solid #4fc08d;
+}
+.loadmore:hover {
+  cursor: pointer;
 }
 </style>

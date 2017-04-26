@@ -1,6 +1,7 @@
 export default {
   home: {
     list: [],
-    comment: ''
+    comment: '',
+    page: 1
   }
 }

@@ -3,12 +3,14 @@ import { timeFormat } from '@/utils'
 import axios from 'axios'
 
 export default {
-  getComments({ commit, state }) {
-    axios.get('api/project/comments.action', {})
-      .then((res) => {
-        const comments = res.data.comments;
-        commit(types.getComments, comments)
-      })
+  getComments({ commit, state }, data) {
+    if (data > -1) {
+      axios.get(`api/project/${data}/comments.action`, {})
+        .then((res) => {
+          const comments = res.data;
+          commit(types.getComments, comments)
+        })
+    }
   },
   addComment({ commit, state }) {
     const comment = state.home.comment.trim();
