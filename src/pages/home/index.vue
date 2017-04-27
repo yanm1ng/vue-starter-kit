@@ -1,19 +1,16 @@
 <template>
   <div>
-    <v-header title="Your First Vue.js App"></v-header>
+    <v-header title="Your First Vue.js App">
+      <div slot="right">
+        <router-link :to="'/list'">my component</router-link>
+      </div>
+    </v-header>
     <div class="container">
       <div class="form">
         <input class="comment-input" :value="comment" @input="updateComment" placeholder="post your comment" @keyup.enter="addComment" />
         <a @click="addComment" class="submit">submit</a>
         <span class="tip">Tips：you can press enter to submit!</span>
       </div>
-      <v-address 
-        :province="address.province"
-        :city="address.city"
-        :area="address.area"
-        :detail="address.detail"
-        @change="addressChange"
-      ></v-address>
       <v-comment :list="list"></v-comment>
       <div v-if="list.length >= 5" class="footer">
         <a class="loadmore" @click="getComments(page)">{{ page == -1 ? '已经到底啦' : '加载更多' }}</a>
@@ -33,16 +30,6 @@ export default {
     comment: state => state.home.comment,
     page: state => state.home.page
   }),
-  data: function() {
-    return {
-      address: {
-        province: '',
-        city: '',
-        detail: '',
-        area: ''
-      }
-    }
-  },
   methods: {
     ...mapActions([
       types.getComments,
@@ -50,9 +37,6 @@ export default {
     ]),
     updateComment (e) {
       this.$store.commit(types.updateComment, e.target.value)
-    },
-    addressChange: function (val) {
-      console.log(val);
     }
   },
   created: function () {
