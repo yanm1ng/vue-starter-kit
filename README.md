@@ -2,29 +2,47 @@
 
 > A Vue.js project with mock-server and unit-test
 
+## components
+
+* [header](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/header.vue)
+* [comment](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/comment.vue)
+* [address-select](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/address.vue)
+
 ## features
 
 we use mock.js to build your mock data ( as local database :) ), for example:
 
 ```javascript
+// db.js
 var Mock = require('mockjs');
 
 module.exports = () => {
-    var db = {
-      project_comments: Mock.mock({
-        "comments|5": [{
+  var db = {
+    project_comments: function() {
+      var res = [];
+      for (let i = 0; i < 40; i++) {
+        res.push(Mock.mock({
           "author": "@name",
           "comment": "@cparagraph",
           "date": "@datetime"
-        }],
-        "next": "@increment"
-      }),
-      push_comment: Mock.mock({
-        "error": 0,
-        "message": "成功"
-      })
-    }
-    return db;
+        }))
+      }
+      return res;
+    }(),
+    push_comment: Mock.mock({
+      "error": 0,
+      "message": "成功"
+    })
+  }
+  return db;
+}
+```
+
+```json
+// routes.json
+{
+  "/project/:page/comments.action": "/project_comments?_page=:page&_limit=5",
+  "/comment/add.action": "/push_comment"
 }
 ```
 

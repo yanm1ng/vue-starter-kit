@@ -1,7 +1,9 @@
 import header from './header'
-import comment from './comment';
+import comment from './comment'
+import address from './address'
 
 export default { 
   header,
-  comment
+  comment,
+  address
 }
