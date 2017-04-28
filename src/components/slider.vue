@@ -192,7 +192,7 @@ li.wait {
 }
 
 em.center {
-  background-color: rgb(198, 47, 47);
+  background-color: #42b983;
 }
 
 .tag {
