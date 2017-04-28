@@ -7,6 +7,7 @@
 * [header](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/header.vue)
 * [comment](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/comment.vue)
 * [address-select](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/address.vue)
+* [image-slider](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/slider.vue)
 
 ## features
 

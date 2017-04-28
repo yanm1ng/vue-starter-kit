@@ -14,6 +14,8 @@
         :detail="address.detail"
         @change="addressChange"
       ></v-address>
+      <h4>Image-Slider</h4>
+      <v-slider v-bind="slider"></v-slider>
     </div>
   </div>
 </template>
@@ -21,23 +23,32 @@
 <script>
 
 export default {
-  data: function() {
+  data: function () {
     return {
       address: {
         province: '',
         city: '',
         area: '',
         detail: ''
-      }
+      },
+      slider: {
+        image: [
+          'static/img/1-1.jpg',
+          'static/img/1-2.jpg', 
+          'static/img/1-3.jpg', 
+          'static/img/1-4.jpg', 
+          'static/img/1-5.jpg'
+        ],
+        imgStyle: {
+          borderRadius: '10px'
+        },
+      },
     }
   },
   methods: {
     addressChange: function (val) {
       console.log(val);
     }
-  },
-  created: function () {
-    this.getComments(this.page)
   }
 }
 </script>
@@ -48,6 +59,6 @@ export default {
   padding: 0 65px;
 }
 h4 {
-  margin: 8px 0;
+  margin: 12px 0;
 }
 </style>
