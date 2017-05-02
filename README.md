@@ -8,6 +8,8 @@
 * [comment](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/comment.vue)
 * [address-select](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/address.vue)
 * [image-slider](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/slider.vue)
+* [qrcode](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/qrcode.vue)
+* waiting for ...
 
 ## features
 
@@ -55,7 +57,7 @@ we use `json-server` to get a full fake REST API
 
 test components and vuex( include `mutations` `actions` `getters` ), test result:
 
-![](https://ww2.sinaimg.cn/large/006tKfTcgy1feyzyw4ia5j31hs0bq7a5.jpg)
+![](https://ww2.sinaimg.cn/large/006tNbRwgy1ff70ybezr0j31ds0bq443.jpg)
 
 ## build setup
 

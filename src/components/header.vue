@@ -13,6 +13,7 @@
 <script>
 
 export default {
+  name: 'header',
   props: {
     title: {
       type: String,

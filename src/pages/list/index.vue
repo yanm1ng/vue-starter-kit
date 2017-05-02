@@ -16,6 +16,12 @@
       ></v-address>
       <h4>Image-Slider</h4>
       <v-slider v-bind="slider"></v-slider>
+      <h4>QRCode</h4>
+      <v-qrcode 
+        :cls="qrcode.class" 
+        :value="qrcode.value"
+        :foreground="qrcode.foreground"
+      ></v-qrcode>
     </div>
   </div>
 </template>
@@ -43,6 +49,11 @@ export default {
           borderRadius: '10px'
         },
       },
+      qrcode: {
+        class: 'qrcode',
+        value: 'https://github.com/yanm1ng',
+        foreground: '#42b983'
+      }
     }
   },
   methods: {

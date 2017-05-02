@@ -20,6 +20,7 @@
 </template>
 <script>
 export default {
+  name: 'slider',
   props: {
     styleObject: {
       default: () => {
