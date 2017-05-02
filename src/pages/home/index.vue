@@ -2,7 +2,7 @@
   <div>
     <v-header title="Your First Vue.js App">
       <div slot="right">
-        <router-link :to="'/list'">my component</router-link>
+        <router-link :to="'/list'">component list</router-link>
       </div>
     </v-header>
     <div class="container">
@@ -47,8 +47,7 @@ export default {
 
 <style scoped>
 .container {
-  margin-top: 100px;
-  padding: 0 65px;
+  padding: 80px 65px 0 65px;
 }
 .form {
   padding-bottom: 15px;

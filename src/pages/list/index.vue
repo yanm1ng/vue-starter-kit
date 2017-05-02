@@ -66,8 +66,7 @@ export default {
 
 <style scoped>
 .container {
-  margin-top: 100px;
-  padding: 0 65px;
+  padding: 80px 65px 0 65px;
 }
 h4 {
   margin: 12px 0;

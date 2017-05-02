@@ -16,3 +16,13 @@ export function timeFormat(fmt) {
       fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
   return fmt;
 }
+
+export function compact(array) {
+  function f(element) {
+    if (element !== false || element !== null || element !== 0 || element !== "" || element !== undefined || element !== NaN) {
+      return element;
+    }
+  }
+  var filtered = array.filter(f);
+  return filtered;
+}
