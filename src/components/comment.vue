@@ -39,9 +39,10 @@ li {
   margin-bottom: 20px;
 }
 .info {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .author {
+  font-size: 24px;
   font-weight: bolder;
 }
 .time {
@@ -50,7 +51,7 @@ li {
   font-size: 12px;
 }
 .content {
-  padding: 10px 15px;
+  padding: 20px;
   word-break: break-all;
   background: #f8f8f8;
   border: 1px solid #dddddd;
@@ -61,11 +62,11 @@ li {
 }
 .content:before {
 	content: '';
-	width: 8px;
-	height: 8px;
+	width: 12px;
+	height: 12px;
 	position: absolute;
 	left: 40px;
-	top: -5px;
+	top: -8px;
 	background-color: #f8f8f8;
 	border: 1PX solid #dddddd;
 	border-width: 0 1PX 1PX 0;

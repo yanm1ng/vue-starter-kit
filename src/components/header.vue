@@ -25,13 +25,13 @@ export default {
 
 <style scoped>
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
-  box-shadow: 0 0 1px rgba(0,0,0,0.25);
-  padding: 10px 0;
-  background-color: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+  background-color: #35495e;
   z-index: 100;
+  font-size: 24px;
 }
 .title {
   color: #42b983;
@@ -39,20 +39,21 @@ export default {
   font-weight: normal;
   margin: 0;
   font-size: 30px;
+  line-height: 80px;
 }
 .left-item {
-  line-height: 40px;
+  line-height: 80px;
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 30px;
 }
 .left-item a {
   color: #42b983;
 }
 .right-item {
-  line-height: 40px;
+  line-height: 80px;
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 30px;
 }
 .right-item a {

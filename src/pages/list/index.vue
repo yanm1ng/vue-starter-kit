@@ -17,7 +17,7 @@
       <h4>Image-Slider</h4>
       <v-slider v-bind="slider"></v-slider>
       <h4>QRCode</h4>
-      <v-qrcode 
+      <v-qrcode
         :cls="qrcode.class" 
         :value="qrcode.value"
         :foreground="qrcode.foreground"
@@ -66,9 +66,11 @@ export default {
 
 <style scoped>
 .container {
-  padding: 80px 65px 0 65px;
+  padding: 100px 60px 100px 60px;
+  overflow: auto;
 }
 h4 {
+  font-size: 30px;
   margin: 12px 0;
 }
 </style>
