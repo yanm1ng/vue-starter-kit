@@ -11,9 +11,13 @@
 * [qrcode](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/qrcode.vue)
 * waiting for ...
 
-## features
+## plugins
 
-we use mock.js to build your mock data ( as local database :) ), for example:
+* toast
+
+## mock-server
+
+we use `json-server` to get a full fake REST API, use mock.js to build mock data ( as local database :) ), for example:
 
 ```javascript
 // db.js
@@ -49,10 +53,6 @@ module.exports = () => {
 }
 ```
 
-## json-server
-
-we use `json-server` to get a full fake REST API
-
 ## unit test
 
 test components and vuex( include `mutations` `actions` `getters` ), test result:
@@ -83,6 +83,7 @@ npm run mock
 # build for production with minification
 npm run build
 ```
+
 ## TODO
 
 - [x] add `vuex` to manage app state
