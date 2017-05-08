@@ -39,7 +39,7 @@ export default {
     }
   },
   created: function () {
-    this.getComments(this.page)
+    this.getComments(this.page);
   }
 }
 </script>

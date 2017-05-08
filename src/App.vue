@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 import { compact } from '@/utils/'
 
 export default {
