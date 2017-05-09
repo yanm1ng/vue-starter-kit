@@ -17,6 +17,14 @@
       <div class="button" @click="openCenter()">center</div>
       <div class="button" @click="openBottom()">bottom</div>
       <div class="button" @click="openLoading()">loading</div>
+      <h4>LoadingBar</h4>
+      <v-loadingbar
+        :onError="loadingError"
+        :onProgress="loadingSuccess"
+        :progress="loadingbar.progress"
+      />
+      <div class="button" @click="progressTo(30)">30%</div>
+      <div class="button" @click="progressTo(100)">100%</div>
     </div>
   </div>
 </template>
@@ -48,32 +56,44 @@ export default {
         class: 'qrcode',
         value: 'https://github.com/yanm1ng',
         foreground: '#42b983'
+      },
+      loadingbar: {
+        progress: 0
       }
     }
   },
   methods: {
-    addressChange: function (val) {
+    addressChange (val) {
       console.log(val);
     },
-    openTop() {
+    openTop () {
       this.$toast.top('top');
     },
-    openCenter() {
+    openCenter () {
       this.$toast.center('center');
     },
-    openBottom() {
+    openBottom () {
       this.$toast.bottom('bottom');
     },
-    openLoading() {
+    openLoading () {
       this.$loading('loading...');
       let self = this;
       setTimeout(function () {
         self.closeLoading()
       }, 2000)
     },
-    closeLoading() {
+    closeLoading () {
       this.$loading.close();
-    }
+    },
+    loadingError () {
+
+    },
+    loadingSuccess () {
+
+    },
+    progressTo(number) {
+      this.loadingbar.progress = number
+    },
   }
 }
 </script>
