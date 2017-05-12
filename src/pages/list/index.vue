@@ -31,6 +31,12 @@
 
 <script>
 
+import sliderimage1 from '@/assets/img/1-1.jpg'
+import sliderimage2 from '@/assets/img/1-2.jpg'
+import sliderimage3 from '@/assets/img/1-3.jpg'
+import sliderimage4 from '@/assets/img/1-4.jpg'
+import sliderimage5 from '@/assets/img/1-5.jpg'
+
 export default {
   data: function () {
     return {
@@ -42,11 +48,11 @@ export default {
       },
       slider: {
         image: [
-          'static/img/1-1.jpg',
-          'static/img/1-2.jpg',
-          'static/img/1-3.jpg',
-          'static/img/1-4.jpg',
-          'static/img/1-5.jpg'
+          sliderimage1,
+          sliderimage2,
+          sliderimage3,
+          sliderimage4,
+          sliderimage5
         ],
         imgStyle: {
           borderRadius: '10px'
