@@ -4,6 +4,7 @@ import address from './address'
 import slider from './slider'
 import qrcode from './qrcode'
 import loadingbar from './loadingbar'
+import chart from './chart'
 
 export default { 
   header,
@@ -11,5 +12,6 @@ export default {
   address,
   slider,
   qrcode,
-  loadingbar
+  loadingbar,
+  chart
 }

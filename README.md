@@ -10,6 +10,7 @@
 * [image-slider](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/slider.vue)
 * [qrcode](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/qrcode.vue)
 * [loading-bar](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/loadingbar.vue)
+* [chart](https://github.com/yanm1ng/vue-starter-kit/blob/master/src/components/chart.vue)
 * waiting for ...
 
 ## plugins
