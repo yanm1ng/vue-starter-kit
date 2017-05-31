@@ -5,16 +5,17 @@
   "author": "yummy1121@foxmail.com <yummy1121@foxmail.com>",
   "private": true,
   "scripts": {
-    "start": "npm run mock & npm run dev",
     "dev": "node build/dev-server.js",
-    "mock": "json-server --watch mock/db.js --middlewares mock/post2get.js --routes mock/routes.json",
+    "mock": "gulp mock",
     "build": "node build/build.js",
-    "test": "karma start test/karma.conf.js --single-run",
-    "lint": "eslint --ext .js,.vue src"
+    "test": "karma start test/karma.conf.js --single-run"
   },
   "dependencies": {
     "axios": "^0.16.1",
     "chart.js": "^2.5.0",
+    "gulp-nodemon": "^2.2.1",
+    "json-server": "^0.10.1",
+    "nodemon": "^1.11.0",
     "qrious": "^2.2.0",
     "vue": "^2.2.2",
     "vue-router": "^2.3.0",
@@ -29,6 +30,7 @@
     "babel-preset-env": "^1.2.1",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
+    "browser-sync": "^2.18.12",
     "chalk": "^1.1.3",
     "connect-history-api-fallback": "^1.3.0",
     "copy-webpack-plugin": "^4.0.1",
@@ -45,6 +47,7 @@
     "extract-text-webpack-plugin": "^2.0.0",
     "file-loader": "^0.10.0",
     "friendly-errors-webpack-plugin": "^1.1.3",
+    "gulp": "^3.9.1",
     "html-webpack-plugin": "^2.28.0",
     "http-proxy-middleware": "^0.17.3",
     "jasmine-core": "^2.6.0",

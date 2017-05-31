@@ -25,26 +25,22 @@ we use `json-server` to get a full fake REST API, use mock.js to build mock data
 // db.js
 var Mock = require('mockjs');
 
-module.exports = () => {
-  var db = {
-    project_comments: function() {
-      var res = [];
-      for (let i = 0; i < 40; i++) {
-        res.push(Mock.mock({
-          "author": "@name",
-          "comment": "@cparagraph",
-          "date": "@datetime"
-        }))
-      }
-      return res;
-    }(),
-    push_comment: Mock.mock({
-      "error": 0,
-      "message": "成功"
-    })
-  }
-  return db;
-}
+module.exports = {
+  project_comments: Mock.mock({
+    "error": 0,
+    "message": "success",
+    "result|40": [{
+      "author": "@name",
+      "comment": "@cparagraph",
+      "date": "@datetime"
+    }]
+  }),
+  push_comment: Mock.mock({
+    "error": 0,
+    "message": "success",
+    "result": []
+  })
+};
 ```
 
 ```json
@@ -64,23 +60,17 @@ test components and vuex( include `mutations` `actions` `getters` ), test result
 ## build setup
 
 ``` bash
-# install json-server
-npm install json-server -g
-
 # install dependencies
 npm install
-
-# serve with hot reload and mock
-npm run start
 
 # serve with hot reload at localhost:8181
 npm run dev
 
-# run unit test
-npm run test
-
 # run mock server at localhost:3000
 npm run mock
+
+# run unit test
+npm run test
 
 # build for production with minification
 npm run build
@@ -90,4 +80,4 @@ npm run build
 
 - [x] add `vuex` to manage app state
 - [x] add unit test
-- [ ] refresh the mock server after modifying `mock/db.js`
+- [x] refresh the mock server after modifying `mock/db.js`

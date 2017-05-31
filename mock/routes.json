@@ -1,4 +1,0 @@
-{
-  "/project/:page/comments.action": "/project_comments?_page=:page&_limit=5",
-  "/comment/add.action": "/push_comment"
-}

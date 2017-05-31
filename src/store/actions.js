@@ -7,7 +7,7 @@ export default {
     if (data > -1) {
       axios.get(`api/project/${data}/comments.action`, {})
         .then((res) => {
-          const comments = res.data;
+          const comments = res.data.result;
           commit(types.getComments, comments)
         })
     }

@@ -1,22 +1,18 @@
 var Mock = require('mockjs');
 
-module.exports = () => {
-  var db = {
-    project_comments: function() {
-      var res = [];
-      for (let i = 0; i < 40; i++) {
-        res.push(Mock.mock({
-          "author": "@name",
-          "comment": "@cparagraph",
-          "date": "@datetime"
-        }))
-      }
-      return res;
-    }(),
-    push_comment: Mock.mock({
-      "error": 0,
-      "message": "成功"
-    })
-  }
-  return db;
+module.exports = {
+  project_comments: Mock.mock({
+    "error": 0,
+    "message": "success",
+    "result|40": [{
+      "author": "@name",
+      "comment": "@cparagraph",
+      "date": "@datetime"
+    }]
+  }),
+  push_comment: Mock.mock({
+    "error": 0,
+    "message": "success",
+    "result": []
+  })
 };
